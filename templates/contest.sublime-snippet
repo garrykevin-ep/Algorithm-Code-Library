@@ -1,0 +1,42 @@
+<snippet>
+	<description>normal</description>
+    <content><![CDATA[
+${1:using namespace std;
+#include <bits/stdc++.h>
+
+#define foreach(i,n) for(__typeof((n).begin())i =(n).begin();i!=(n).end();i++)
+#define rep(i,n) for(__typeof(n) i=0; i<(n); i++)
+#define all(x) x.begin(),x.end()
+#define pb push_back
+#define mp make_pair
+#define ins insert
+#define ff first
+#define ss second
+#define ll long long
+
+typedef string st;
+typedef vector<int> vi;
+typedef vector<st> vs;
+typedef map<int,int> mii;
+typedef map<st,int> msi;
+typedef set<int> si;
+typedef set<st> ss;
+typedef pair<int,int> pii;
+typedef vector<pii> vpii;
+
+
+int main()
+{
+	time_t start=clock();
+	ios_base::sync_with_stdio(0);
+
+	${0:}
+}
+	cerr << " Program has run "<< ( clock()-start ) / CLOCKS_PER_SEC << " s " << endl;
+	return 0;
+}
+]]>
+    </content>
+    <tabTrigger>n</tabTrigger>
+    <scope>source.c, source.objc, source.c++, source.objc++</scope> 
+</snippet>
