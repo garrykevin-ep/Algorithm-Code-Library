@@ -1,0 +1,33 @@
+<snippet>
+	<description>normal minimal</description>
+    <content><![CDATA[
+${1:#include <iostream>
+#include <map>
+#include <vector>
+#include<set>
+using namespace std;
+
+#define foreach(i,n) for(__typeof((n).begin())i =(n).begin();i!=(n).end();i++)
+#define rep(i,n) for(__typeof(n) i=0; i<(n); i++)
+#define pb push_back
+#define ins insert
+#define ff first
+#define ss second
+#define ll long long
+#define sz size
+#define debug1(x) cout << #x << ": " << x << endl
+#define debug2(x, y) cout << #x << ": " << x << '\t' << #y << ": " << y << endl
+#define debug3(x, y, z) cout << #x << ": " << x << '\t' << #y << ": " << y << '\t' << #z << ": " << z << endl
+
+
+int main()
+{
+	${0:}
+}
+	return 0;
+}
+]]>
+    </content>
+    <tabTrigger>nm</tabTrigger>
+    <scope>source.c, source.objc, source.c++, source.objc++</scope> 
+</snippet>
