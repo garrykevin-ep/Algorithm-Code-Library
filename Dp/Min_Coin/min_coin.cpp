@@ -1,30 +1,5 @@
-<snippet>
-	<description>normal</description>
-    <content><![CDATA[
-${1:#include <iostream>
-#include <string>
-#include <set>
-#include <map>
-#include <stack>
-#include <queue>
-#include <vector>
-#include <utility>
-#include <iomanip>
-#include <sstream>
-#include <bitset>
-#include <cstdlib>
-#include <iterator>
-#include <algorithm>
-/// C Header Files
+#include <bits/stdc++.h>
 using namespace std;
-
-#include <cstdio>
-#include <cctype>
-#include <cmath>
-#include <math.h>
-#include <ctime>
-#include <cstring>
-
 
 #define foreach(i,n) for(__typeof((n).begin())i =(n).begin();i!=(n).end();i++)
 #define rep(i,n) for(__typeof(n) i=0; i<(n); i++)
@@ -53,12 +28,46 @@ typedef vector<pii> vpii;
 
 int main()
 {
-	${0:}
+    int s,n;
+    cin>>s>>n;
+    vi x;
+    int t;
+    rep(i,n)
+    {
+        cin>>t;
+        x.pb(t);
+    }
+    int sum[s+1];
+   
+    rep(i,s+1)
+    {
+        sum[i] = INT_MAX;
+    }
+    sum[0] = 0;
+    
+    si st;
+    
+    rep(i,n)
+    {
+        for(int j=1;j<s+1;j++)
+        {
+            if(x[i] <= j)
+            {
+                int c_taken = sum[j-x[i]]+1;
+                if(c_taken < sum[j])
+                {
+                    sum[j] = c_taken;
+                }
+            }
+        }
+        ]if(sum[s] != INT_MAX)
+        {
+            st.ins(sum[s]);
+        }
+    }
+    
+    cout<<st.size();
+    
+
+  return 0;
 }
-	return 0;
-}
-]]>
-    </content>
-    <tabTrigger>n</tabTrigger>
-    <scope>source.c, source.objc, source.c++, source.objc++</scope> 
-</snippet>
