@@ -23,6 +23,16 @@ int CeilIndex(std::vector<int> &v, int l, int r, int key) {
     return r;
 }
  
+/*
+if greater than last element increase sub-seq
+if middle replace with ceil
+*/
+
+/*
+logical proof for replacing with small numbers maybe wrong
+small numbers can be a potential candidate to start new sequence
+
+*/
 int LongestIncreasingSubsequenceLength(std::vector<int> &v) {
     if (v.size() == 0)
         return 0;
@@ -39,14 +49,11 @@ int LongestIncreasingSubsequenceLength(std::vector<int> &v) {
             // v[i] extends largest subsequence
             tail[length++] = v[i];
         else
-            // v[i] will become end candidate of an existing subsequence or
-            // Throw away larger elements in all LIS, to make room for upcoming grater elements than v[i]
-            // (and also, v[i] would have already appeared in one of LIS, identify the location and replace it)
             tail[CeilIndex(tail, -1, length-1, v[i])] = v[i];
     }
     
 /*      
-    table stores the value least value of ith+1 length subsequence
+    dp:table stores the value least value of ith+1 length subsequence
     j++: 0  *i: 2
     j++: 1  *i: 5
     j++: 2  *i: 3
