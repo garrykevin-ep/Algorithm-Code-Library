@@ -45,11 +45,10 @@ int main()
     }
     sum[0] = 0;
     
-    si st;
     
-    rep(i,n)
+    rep(i,n)//for coins
     {
-        for(int j=1;j<s+1;j++)
+        for(int j=1;j<s+1;j++)//for each sum
         {
             if(x[i] <= j)
             {
@@ -60,13 +59,9 @@ int main()
                 }
             }
         }
-        ]if(sum[s] != INT_MAX)
-        {
-            st.ins(sum[s]);
-        }
     }
     
-    cout<<st.size();
+    cout<<x[n];
     
 
   return 0;
