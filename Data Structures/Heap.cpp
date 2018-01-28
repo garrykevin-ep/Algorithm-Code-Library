@@ -1,7 +1,26 @@
 /*
 
 source : gog
+min heap
+constraints
+    binary tree =>  only parent to two children
+    parent < children
 
+main functions
+    insert()
+        insert in last place
+        fix if heap is violated
+    decreaseKey(index,new_value)
+        in the index change value
+        fix if heap is violated
+    extractmin() => deletes root
+        make last elem root
+        fix heap using heapify
+
+derived function
+    delete(index)
+        make index -infinity
+        then remove root
 */
 #include<iostream>
 #include<climits>
@@ -121,6 +140,7 @@ void MinHeap::deleteKey(int i)
 // This method assumes that the subtrees are already heapified
 void MinHeap::MinHeapify(int i)
 {
+    //l,r,smallest are index
     int l = left(i);
     int r = right(i);
     int smallest = i;
