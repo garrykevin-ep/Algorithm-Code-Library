@@ -21,6 +21,11 @@ derived function
     delete(index)
         make index -infinity
         then remove root
+
+heapify(i)=> to fix heap when root deleted
+    l,r,i
+    check smallest in 3 elemts
+    swap and call the same function for small index
 */
 #include<iostream>
 #include<climits>
