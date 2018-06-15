@@ -60,7 +60,7 @@ int main()
 
   int shift = 0;
 
-  //shift is the start index of mismatch
+  
   while(textLen >= shift + patLen  )
   {
       int patternIndex;
