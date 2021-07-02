@@ -10,3 +10,4 @@ Library of my implementations of various algorithm and data-structures
 ## Resource for system design
 
 * https://www.youtube.com/channel/UCNc-Wa_ZNBAGzFkYbAHw9eg
+* https://github.com/garrykevin-ep/Algorithm-Code-Library/blob/84c2bcdaa9dcda062b3b1db70755d010ec772965/resource/system-design.pdf
